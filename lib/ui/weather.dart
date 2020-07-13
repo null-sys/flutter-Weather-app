@@ -3,7 +3,10 @@ import '../util/utils.dart';
 
 class Weather extends StatefulWidget {
   @override
-  _WeatherState createState() => _WeatherState();
+  State<StatefulWidget> createState() {
+    return new _WeatherState();
+  }
+  
 }
 
 class _WeatherState extends State<Weather> {
