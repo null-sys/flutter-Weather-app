@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../util/utils.dart';
 
 class Weather extends StatefulWidget {
   @override
@@ -10,9 +11,17 @@ class _WeatherState extends State<Weather> {
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: new AppBar(
-        title:  new Text("Weather"), 
+        title: new Text("Weather App"),
         backgroundColor: Colors.red,
-        actions: <Widget>[],
+        actions: <Widget>[
+          new IconButton(
+              icon: new Icon(Icons.menu), onPressed: () => debugPrint("Hey"))
+        ],
+      ),
+      body: new Stack(
+        children: <Widget>[
+          new Center(child: new Image.asset('assets/back1.png'))
+        ],
       ),
     );
   }
